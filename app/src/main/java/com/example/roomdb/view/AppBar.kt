@@ -24,5 +24,6 @@ fun SiswaTopAppBar( // Menambahkan fungsi tombol kembali
 ) {
     CenterAlignedTopAppBar( // Menambahkan tombol kembali
         title = { Text(title) }, // Menambahkan judul
-        
+        modifier = modifier, // Menambahkan modifier
+
 }
