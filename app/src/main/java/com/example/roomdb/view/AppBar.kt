@@ -23,5 +23,6 @@ fun SiswaTopAppBar( // Menambahkan fungsi tombol kembali
     navigateUp: () -> Unit = {}
 ) {
     CenterAlignedTopAppBar( // Menambahkan tombol kembali
-
+        title = { Text(title) }, // Menambahkan judul
+        
 }
