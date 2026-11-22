@@ -14,10 +14,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.roomdb.R
-import com.example.roomdb.uicontroller.SiswaTopAppBar
+import com.example.roomdb.view.SiswaTopAppBar
 import com.example.roomdb.viewmodel.DetailsSiswa
 import com.example.roomdb.viewmodel.EntryViewModel
-import com.example.roomdb.viewmodel.PenyediaViewModel
+import com.example.roomdb.viewmodel.provider.PenyediaViewModel
 import com.example.roomdb.viewmodel.UIStateSiswa
 import kotlinx.coroutines.launch
 
@@ -119,7 +119,7 @@ fun FormInputSiswa(
             value = detailSiswa.telpon,
             onValueChange = { onValueChange(detailSiswa.copy(telpon = it)) },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
-            label = { Text(stringResource(R.string.telpon)) },
+            label = { Text(stringResource(R.string.telepon)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
