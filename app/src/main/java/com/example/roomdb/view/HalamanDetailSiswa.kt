@@ -188,3 +188,25 @@ private fun BarisDetailData( // Menambahkan fungsi BarisDetailData untuk menampi
         Text(text = itemDetail, fontWeight = FontWeight.Bold)
     }
 }
+
+@Composable
+private fun DeleteConfirmationDialog( // menambahkan fungsi DeleteConfirmationDialog untuk menampilkan dialog konfirmasi penghapusan
+    onDeleteConfirm: () -> Unit,
+    onDeleteCancel: () -> Unit,
+    modifier: Modifier = Modifier
+) {
+    AlertDialog(onDismissRequest = { /* Do nothing */ },
+        title = { Text(stringResource(R.string.attention)) },
+        text = { Text(stringResource(R.string.tanya)) },
+        modifier = modifier,
+        dismissButton = {
+            TextButton(onClick = onDeleteCancel) {
+                Text(stringResource(R.string.no))
+            }
+        },
+        confirmButton = {
+            TextButton(onClick = onDeleteConfirm) {
+                Text(stringResource(R.string.yes))
+            }
+        })
+}
