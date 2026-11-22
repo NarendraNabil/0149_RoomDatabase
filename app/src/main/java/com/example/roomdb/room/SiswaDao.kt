@@ -11,6 +11,15 @@ interface SiswaDao {
     @Query("SELECT * from tblSiswa ORDER BY nama ASC")
     fun getAllSiswa(): Flow<List<Siswa>>
 
+    @Query("SELECT * from tblSiswa WHERE id = :id")
+    fun getSiswa(id: Int): Flow<Siswa?>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(siswa: Siswa)
+
+    @androidx.room.Update
+    suspend fun update(siswa: Siswa)
+
+    @androidx.room.Delete
+    suspend fun delete(siswa: Siswa)
 }
