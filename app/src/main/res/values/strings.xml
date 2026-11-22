@@ -5,6 +5,9 @@
     <string name="nama">Nama Siswa</string>
     <string name="alamat">Alamat Siswa</string>
     <string name="telepon">Telepon Siswa</string>
+    <string name="nama1">Nama:</string>
+    <string name="alamat1">Alamat:</string>
+    <string name="telpon1">Telepon:</string>
     <string name="required_field">* required field</string>
     <string name="btn_submit">Submit</string>
     <string name="detail_siswa">Detail Siswa</string>
