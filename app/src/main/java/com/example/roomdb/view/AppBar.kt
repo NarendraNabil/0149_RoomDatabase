@@ -26,5 +26,15 @@ fun SiswaTopAppBar( // Menambahkan fungsi tombol kembali
         title = { Text(title) }, // Menambahkan judul
         modifier = modifier, // Menambahkan modifier
         scrollBehavior = scrollBehavior, // Menambahkan perilaku gulir
-
+        navigationIcon = { // Menambahkan ikon navigasi
+            if (canNavigateBack) {
+                IconButton(onClick = navigateUp) {
+                    Icon(
+                        imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                        contentDescription = stringResource(R.string.back)
+                    )
+                }
+            }
+        }
+    )
 }
