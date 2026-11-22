@@ -21,4 +21,7 @@ fun SiswaTopAppBar( // Menambahkan fungsi tombol kembali
     modifier: Modifier = Modifier,
     scrollBehavior: TopAppBarScrollBehavior? = null,
     navigateUp: () -> Unit = {}
-)
+) {
+    CenterAlignedTopAppBar( // Menambahkan tombol kembali
+
+}
